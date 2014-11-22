@@ -11,6 +11,7 @@
 #import "Utils.h"
 #import "TeamMember.h"
 #import "TeamMemberBioCell.h"
+#import "TeamMemberSpecialtiesCell.h"
 
 @interface TeamMemberDetailViewController ()
 
@@ -33,6 +34,7 @@
 @implementation TeamMemberDetailViewController
 
 static NSString * const bioIdentifier = @"bioCell";
+static NSString * const specialitiesIdentifier = @"specialtiesCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -86,14 +88,24 @@ static NSString * const bioIdentifier = @"bioCell";
     
     _tableView.estimatedRowHeight = 44.0;
     _tableView.rowHeight = UITableViewAutomaticDimension;
+    
+//    [self setupTagView];
 }
 
+//-(void) setupTagView {
+//    
+//    AMTagListView *tagListView = [[AMTagListView alloc] init];
+//    [self.view addSubview:tagListView];
+//    
+//    // Add multiple tags
+//    [tagListView addTags:@[@"my tag", @"some tag"]];
+//}
 
 
 #pragma mark - UITableView data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 
@@ -104,14 +116,26 @@ static NSString * const bioIdentifier = @"bioCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TeamMemberBioCell *cell = [tableView dequeueReusableCellWithIdentifier:bioIdentifier];
-    if (cell == nil) {
-        cell = [[TeamMemberBioCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:bioIdentifier];
+    if (indexPath.section == 0) {
+        
+        TeamMemberBioCell *cell = [tableView dequeueReusableCellWithIdentifier:bioIdentifier];
+        if (cell == nil) {
+            cell = [[TeamMemberBioCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:bioIdentifier];
+        }
+        
+        cell.bioLabel.text = _currentTeamMember.bio;
+        
+        return cell;
+        
+    } else {
+       
+        TeamMemberSpecialtiesCell *cell = [tableView dequeueReusableCellWithIdentifier:specialitiesIdentifier];
+        if (cell == nil) {
+            cell = [[TeamMemberSpecialtiesCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:specialitiesIdentifier];
+        }
+        
+        return cell;
     }
-    
-    cell.bioLabel.text = _currentTeamMember.bio;
-    
-    return cell;
 }
 
 #pragma mark - UITableView delegate

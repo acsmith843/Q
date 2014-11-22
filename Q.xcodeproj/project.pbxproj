@@ -42,6 +42,8 @@
 		C2C227901A1FCE5A00D95FD4 /* linkedInIcon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2C2278D1A1FCE5A00D95FD4 /* linkedInIcon@2x.jpg */; };
 		C2C227911A1FCE5A00D95FD4 /* twittericon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C2278E1A1FCE5A00D95FD4 /* twittericon@2x.png */; };
 		C2C227941A2013A600D95FD4 /* TeamMemberBioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C227931A2013A600D95FD4 /* TeamMemberBioCell.m */; };
+		C2C227AF1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C227AE1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.m */; };
+		C2C227B31A20321D00D95FD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C227B01A2031AA00D95FD4 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,9 @@
 		C2C2278E1A1FCE5A00D95FD4 /* twittericon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twittericon@2x.png"; sourceTree = "<group>"; };
 		C2C227921A2013A600D95FD4 /* TeamMemberBioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMemberBioCell.h; sourceTree = "<group>"; };
 		C2C227931A2013A600D95FD4 /* TeamMemberBioCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMemberBioCell.m; sourceTree = "<group>"; };
+		C2C227AD1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMemberSpecialtiesCell.h; sourceTree = "<group>"; };
+		C2C227AE1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMemberSpecialtiesCell.m; sourceTree = "<group>"; };
+		C2C227B01A2031AA00D95FD4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2C227B31A20321D00D95FD4 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C226CF1A1F526600D95FD4 /* Q */,
+				C2C227B21A2031B300D95FD4 /* Frameworks */,
 				C2C226EC1A1F526600D95FD4 /* QTests */,
 				C2C226CE1A1F526600D95FD4 /* Products */,
 			);
@@ -231,6 +238,8 @@
 				C2C227091A1F572400D95FD4 /* TeamMemberCell.m */,
 				C2C227921A2013A600D95FD4 /* TeamMemberBioCell.h */,
 				C2C227931A2013A600D95FD4 /* TeamMemberBioCell.m */,
+				C2C227AD1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.h */,
+				C2C227AE1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -323,6 +332,15 @@
 				C2C227891A1FC86500D95FD4 /* Qonceptual-Logo@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		C2C227B21A2031B300D95FD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2C227B01A2031AA00D95FD4 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			path = Q;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +469,7 @@
 				C2C227631A1F70B100D95FD4 /* UIWebView+AFNetworking.m in Sources */,
 				C2C2275D1A1F70B100D95FD4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				C2C227771A1F70CA00D95FD4 /* AFHTTPRequestOperation.m in Sources */,
+				C2C227AF1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.m in Sources */,
 				C2C227941A2013A600D95FD4 /* TeamMemberBioCell.m in Sources */,
 				C2C227601A1F70B100D95FD4 /* UIImageView+AFNetworking.m in Sources */,
 				C2C227791A1F70CA00D95FD4 /* AFHTTPSessionManager.m in Sources */,
