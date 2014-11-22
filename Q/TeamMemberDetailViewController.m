@@ -1,0 +1,121 @@
+//
+//  TeamMemberDetailViewController.m
+//  Q
+//
+//  Created by Adam C. Smith on 11/21/14.
+//  Copyright (c) 2014 Adam C. Smith. All rights reserved.
+//
+
+#import "TeamMemberDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
+#import "Utils.h"
+#import "TeamMember.h"
+#import "TeamMemberBioCell.h"
+
+@interface TeamMemberDetailViewController ()
+
+//header view
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *fullName;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *twitterImage;
+@property (weak, nonatomic) IBOutlet UIImageView *facebookImage;
+@property (weak, nonatomic) IBOutlet UIImageView *linkedInImage;
+@property (weak, nonatomic) IBOutlet UIImageView *githubImage;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
+
+//table view
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@end
+
+@implementation TeamMemberDetailViewController
+
+static NSString * const bioIdentifier = @"bioCell";
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.title = _currentTeamMember.firstName;
+    
+    [self setupHeaderView];
+    [self setupTableView];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (void) setupHeaderView {
+    
+    _headerView.layer.borderWidth = 1.0f;
+    _headerView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    
+    _logoImage.image = [UIImage imageNamed:@"Q.png"];
+    [Utils makeViewRounded:_logoImage];
+    
+    [_profileImage setImageWithURL:[[NSURL alloc] initWithString:_currentTeamMember.imageUrl]];
+    [Utils makeViewRounded:_profileImage];
+    
+    _fullName.text = [NSString stringWithFormat:@"%@ %@", _currentTeamMember.firstName, _currentTeamMember.lastName];
+    _titleLabel.text = _currentTeamMember.title;
+    
+    [Utils makeViewRounded:_twitterImage];
+    [Utils makeViewRounded:_facebookImage];
+    [Utils makeViewRounded:_linkedInImage];
+    [Utils makeViewRounded:_githubImage];
+}
+
+- (void) setupTableView {
+    
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
+    _tableView.estimatedRowHeight = 44.0;
+    _tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+
+
+#pragma mark - UITableView data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TeamMemberBioCell *cell = [tableView dequeueReusableCellWithIdentifier:bioIdentifier];
+    if (cell == nil) {
+        cell = [[TeamMemberBioCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:bioIdentifier];
+    }
+    
+    cell.bioLabel.text = _currentTeamMember.bio;
+    
+    return cell;
+}
+
+#pragma mark - UITableView delegate
+
+// TODO
+
+@end

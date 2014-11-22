@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  TeamMemberBioCell.h
 //  Q
 //
 //  Created by Adam C. Smith on 11/21/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface TeamMemberBioCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *bioLabel;
 
 @end
-
