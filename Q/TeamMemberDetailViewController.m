@@ -89,17 +89,9 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
     _tableView.estimatedRowHeight = 44.0;
     _tableView.rowHeight = UITableViewAutomaticDimension;
     
-//    [self setupTagView];
+    [_tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 }
 
-//-(void) setupTagView {
-//    
-//    AMTagListView *tagListView = [[AMTagListView alloc] init];
-//    [self.view addSubview:tagListView];
-//    
-//    // Add multiple tags
-//    [tagListView addTags:@[@"my tag", @"some tag"]];
-//}
 
 
 #pragma mark - UITableView data source
@@ -133,6 +125,8 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
         if (cell == nil) {
             cell = [[TeamMemberSpecialtiesCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:specialitiesIdentifier];
         }
+        
+        [cell.tagListView addTags:_currentTeamMember.specialties andRearrange:YES];
         
         return cell;
     }

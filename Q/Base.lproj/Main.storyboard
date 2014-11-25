@@ -177,7 +177,7 @@
                                     <constraint firstAttribute="trailing" secondItem="yOY-II-eVW" secondAttribute="trailing" constant="8" id="aO2-8a-l8P"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eV5-ua-nDe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eV5-ua-nDe">
                                 <rect key="frame" x="1" y="140" width="413" height="483"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -201,46 +201,43 @@
                                                 <constraint firstItem="03j-2I-KQp" firstAttribute="leading" secondItem="9Og-MK-TnE" secondAttribute="leadingMargin" id="BXt-1p-egt"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="03j-2I-KQp" secondAttribute="bottom" constant="-2.5" id="M84-Fw-cvc"/>
                                                 <constraint firstItem="03j-2I-KQp" firstAttribute="top" secondItem="9Og-MK-TnE" secondAttribute="topMargin" id="N2o-wh-SuU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="03j-2I-KQp" secondAttribute="bottom" constant="-3" id="Ysi-bD-HKB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="03j-2I-KQp" secondAttribute="bottom" constant="-3" id="dTj-rA-gGl"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="M84-Fw-cvc"/>
+                                                    <exclude reference="Ysi-bD-HKB"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="bioLabel" destination="03j-2I-KQp" id="A6J-As-u5M"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="specialtiesCell" rowHeight="79" id="YTn-Xb-ulD" customClass="TeamMemberSpecialtiesCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="specialtiesCell" rowHeight="106" id="YTn-Xb-ulD" customClass="TeamMemberSpecialtiesCell">
                                         <rect key="frame" x="0.0" y="0.0" width="413" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YTn-Xb-ulD" id="6X8-hg-Tdu">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Java, Objective-C" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teO-RP-D1r">
-                                                    <rect key="frame" x="8" y="37" width="397" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specialties:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGY-VR-yLc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Specialties:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGY-VR-yLc">
                                                     <rect key="frame" x="8" y="8" width="97" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="ZOM-ZV-Das"/>
-                                                        <constraint firstAttribute="width" constant="97" id="h7N-nn-ycm"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qtp-MC-Wgd" customClass="AMTagListView">
+                                                    <rect key="frame" x="8" y="37" width="397" height="61"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="teO-RP-D1r" firstAttribute="top" secondItem="XGY-VR-yLc" secondAttribute="bottom" constant="8" id="6PD-Tv-5lx"/>
-                                                <constraint firstItem="teO-RP-D1r" firstAttribute="trailing" secondItem="6X8-hg-Tdu" secondAttribute="trailingMargin" id="DA6-eI-d11"/>
-                                                <constraint firstItem="XGY-VR-yLc" firstAttribute="leading" secondItem="6X8-hg-Tdu" secondAttribute="leadingMargin" id="Kym-7w-S99"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="teO-RP-D1r" secondAttribute="bottom" constant="12.5" id="Xir-qk-CxE"/>
-                                                <constraint firstItem="XGY-VR-yLc" firstAttribute="top" secondItem="6X8-hg-Tdu" secondAttribute="topMargin" id="ZKA-Da-8bM"/>
-                                                <constraint firstItem="teO-RP-D1r" firstAttribute="leading" secondItem="6X8-hg-Tdu" secondAttribute="leadingMargin" id="bjC-8o-RDr"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="tagListView" destination="Qtp-MC-Wgd" id="Fw8-lf-qMc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

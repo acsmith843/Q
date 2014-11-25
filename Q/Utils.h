@@ -13,6 +13,4 @@
 
 + (void)makeViewRounded: (UIView *) view;
 
-+ (UIImage *) blurSnapshotDarkEffect : (UIViewController *) currentViewController;
-
 @end

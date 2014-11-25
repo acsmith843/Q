@@ -12,6 +12,12 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    // style the tags
+    [[AMTagView appearance] setTagColor:[UIColor clearColor]];
+    [[AMTagView appearance] setTextColor:[UIColor cyanColor]];
+    [[AMTagView appearance] setInnerTagPadding:0];
+    self.tagListView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

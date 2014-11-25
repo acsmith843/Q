@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AMTagListView.h"
 
 @interface TeamMemberSpecialtiesCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet AMTagListView *tagListView;
 
 @end
