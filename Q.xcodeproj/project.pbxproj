@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C257C1701A28A9FE00DF3DD4 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C257C16F1A28A9FE00DF3DD4 /* background@2x.jpg */; };
+		C257C1731A28AD8F00DF3DD4 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C257C1721A28AD8F00DF3DD4 /* UIImage+ImageEffects.m */; };
 		C2C226D31A1F526600D95FD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C226D21A1F526600D95FD4 /* main.m */; };
 		C2C226D61A1F526600D95FD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C226D51A1F526600D95FD4 /* AppDelegate.m */; };
 		C2C226DF1A1F526600D95FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C226DD1A1F526600D95FD4 /* Main.storyboard */; };
@@ -41,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		9E84E6E2D25840D2568AA1C0 /* Pods-Q.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Q.release.xcconfig"; path = "Pods/Target Support Files/Pods-Q/Pods-Q.release.xcconfig"; sourceTree = "<group>"; };
+		C257C16F1A28A9FE00DF3DD4 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
+		C257C1711A28AD8F00DF3DD4 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		C257C1721A28AD8F00DF3DD4 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		C2C226CD1A1F526600D95FD4 /* Q.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Q.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C226D11A1F526600D95FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C226D21A1F526600D95FD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,14 +133,14 @@
 		C2C226CF1A1F526600D95FD4 /* Q */ = {
 			isa = PBXGroup;
 			children = (
+				C2C226DD1A1F526600D95FD4 /* Main.storyboard */,
+				C2C226D41A1F526600D95FD4 /* AppDelegate.h */,
+				C2C226D51A1F526600D95FD4 /* AppDelegate.m */,
 				C2C226FE1A1F539E00D95FD4 /* Cells */,
 				C2C226FA1A1F528000D95FD4 /* Controllers */,
 				C2C226F91A1F527900D95FD4 /* Models */,
 				C2C227861A1FC85000D95FD4 /* Resources */,
 				C2C227101A1F6A4C00D95FD4 /* Utils */,
-				C2C226D41A1F526600D95FD4 /* AppDelegate.h */,
-				C2C226D51A1F526600D95FD4 /* AppDelegate.m */,
-				C2C226DD1A1F526600D95FD4 /* Main.storyboard */,
 				C2C226E01A1F526600D95FD4 /* Images.xcassets */,
 				C2C226E21A1F526600D95FD4 /* LaunchScreen.xib */,
 				C2C226D01A1F526600D95FD4 /* Supporting Files */,
@@ -205,6 +210,8 @@
 		C2C227101A1F6A4C00D95FD4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C257C1711A28AD8F00DF3DD4 /* UIImage+ImageEffects.h */,
+				C257C1721A28AD8F00DF3DD4 /* UIImage+ImageEffects.m */,
 				C2C227111A1F6A8900D95FD4 /* Utils.h */,
 				C2C227121A1F6A8900D95FD4 /* Utils.m */,
 			);
@@ -222,6 +229,7 @@
 		C2C227871A1FC85700D95FD4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C257C16F1A28A9FE00DF3DD4 /* background@2x.jpg */,
 				C2C2278C1A1FCE5A00D95FD4 /* github@2x.png */,
 				C2C2278D1A1FCE5A00D95FD4 /* linkedInIcon@2x.jpg */,
 				C2C2278E1A1FCE5A00D95FD4 /* twittericon@2x.png */,
@@ -330,6 +338,7 @@
 				C2C2278A1A1FC86500D95FD4 /* Q@2x.png in Resources */,
 				C2C226E11A1F526600D95FD4 /* Images.xcassets in Resources */,
 				C2C227901A1FCE5A00D95FD4 /* linkedInIcon@2x.jpg in Resources */,
+				C257C1701A28A9FE00DF3DD4 /* background@2x.jpg in Resources */,
 				C2C2278F1A1FCE5A00D95FD4 /* github@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +396,7 @@
 				C2C2270B1A1F572400D95FD4 /* TeamMemberCell.m in Sources */,
 				C2C227131A1F6A8900D95FD4 /* Utils.m in Sources */,
 				C2C226D31A1F526600D95FD4 /* main.m in Sources */,
+				C257C1731A28AD8F00DF3DD4 /* UIImage+ImageEffects.m in Sources */,
 				C2C227AF1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.m in Sources */,
 				C2C227941A2013A600D95FD4 /* TeamMemberBioCell.m in Sources */,
 				C2C2270F1A1F5C7200D95FD4 /* TeamMemberViewController.m in Sources */,
