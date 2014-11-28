@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C257C1701A28A9FE00DF3DD4 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C257C16F1A28A9FE00DF3DD4 /* background@2x.jpg */; };
-		C257C1731A28AD8F00DF3DD4 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C257C1721A28AD8F00DF3DD4 /* UIImage+ImageEffects.m */; };
 		C2C226D31A1F526600D95FD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C226D21A1F526600D95FD4 /* main.m */; };
 		C2C226D61A1F526600D95FD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C226D51A1F526600D95FD4 /* AppDelegate.m */; };
 		C2C226DF1A1F526600D95FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C226DD1A1F526600D95FD4 /* Main.storyboard */; };
@@ -44,8 +43,6 @@
 /* Begin PBXFileReference section */
 		9E84E6E2D25840D2568AA1C0 /* Pods-Q.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Q.release.xcconfig"; path = "Pods/Target Support Files/Pods-Q/Pods-Q.release.xcconfig"; sourceTree = "<group>"; };
 		C257C16F1A28A9FE00DF3DD4 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
-		C257C1711A28AD8F00DF3DD4 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		C257C1721A28AD8F00DF3DD4 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		C2C226CD1A1F526600D95FD4 /* Q.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Q.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C226D11A1F526600D95FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C226D21A1F526600D95FD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -210,8 +207,6 @@
 		C2C227101A1F6A4C00D95FD4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C257C1711A28AD8F00DF3DD4 /* UIImage+ImageEffects.h */,
-				C257C1721A28AD8F00DF3DD4 /* UIImage+ImageEffects.m */,
 				C2C227111A1F6A8900D95FD4 /* Utils.h */,
 				C2C227121A1F6A8900D95FD4 /* Utils.m */,
 			);
@@ -396,7 +391,6 @@
 				C2C2270B1A1F572400D95FD4 /* TeamMemberCell.m in Sources */,
 				C2C227131A1F6A8900D95FD4 /* Utils.m in Sources */,
 				C2C226D31A1F526600D95FD4 /* main.m in Sources */,
-				C257C1731A28AD8F00DF3DD4 /* UIImage+ImageEffects.m in Sources */,
 				C2C227AF1A20315E00D95FD4 /* TeamMemberSpecialtiesCell.m in Sources */,
 				C2C227941A2013A600D95FD4 /* TeamMemberBioCell.m in Sources */,
 				C2C2270F1A1F5C7200D95FD4 /* TeamMemberViewController.m in Sources */,
