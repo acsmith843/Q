@@ -206,6 +206,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lL-Iz-np6" userLabel="Background View">
+                                <rect key="frame" x="0.0" y="-2" width="414" height="677"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Gyy-60-BCv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="677"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q.png" translatesAutoresizingMaskIntoConstraints="NO" id="CQ9-hR-Ebe">
+                                        <rect key="frame" x="95" y="125" width="225" height="225"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="225" id="L6e-3h-8E8"/>
+                                            <constraint firstAttribute="width" constant="225" id="jLN-ab-0Nk"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CQ9-hR-Ebe" secondAttribute="bottom" constant="327" id="9ED-QL-dFR"/>
+                                    <constraint firstItem="CQ9-hR-Ebe" firstAttribute="top" secondItem="8lL-Iz-np6" secondAttribute="top" constant="125" id="mnz-Qn-3bB"/>
+                                    <constraint firstAttribute="centerX" secondItem="CQ9-hR-Ebe" secondAttribute="centerX" constant="-0.5" id="xDK-uC-icB"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7b-FQ-rwR" userLabel="Header View">
                                 <rect key="frame" x="1" y="0.0" width="413" height="132"/>
                                 <subviews>
@@ -268,7 +289,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bioCell" rowHeight="45" id="wQy-Tq-Buj" customClass="TeamMemberBioCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="bioCell" rowHeight="45" id="wQy-Tq-Buj" customClass="TeamMemberBioCell">
                                         <rect key="frame" x="0.0" y="0.0" width="413" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wQy-Tq-Buj" id="9Og-MK-TnE">
@@ -302,7 +323,7 @@
                                             <outlet property="bioLabel" destination="03j-2I-KQp" id="A6J-As-u5M"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="specialtiesCell" rowHeight="106" id="YTn-Xb-ulD" customClass="TeamMemberSpecialtiesCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="specialtiesCell" rowHeight="106" id="YTn-Xb-ulD" customClass="TeamMemberSpecialtiesCell">
                                         <rect key="frame" x="0.0" y="0.0" width="413" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YTn-Xb-ulD" id="6X8-hg-Tdu">
@@ -331,9 +352,13 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eV5-ua-nDe" firstAttribute="leading" secondItem="dFR-lD-VfN" secondAttribute="leadingMargin" constant="-15" id="Dhb-xQ-Opm"/>
+                            <constraint firstItem="8lL-Iz-np6" firstAttribute="top" secondItem="0LH-TM-PxY" secondAttribute="bottom" constant="-2" id="LtC-XX-QVH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c7b-FQ-rwR" secondAttribute="trailing" constant="-16" id="M04-xa-uB7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eV5-ua-nDe" secondAttribute="trailing" constant="-16" id="NOu-pw-qwc"/>
                             <constraint firstItem="mwl-4m-Fm1" firstAttribute="top" secondItem="eV5-ua-nDe" secondAttribute="bottom" id="OaR-0M-TSM"/>
+                            <constraint firstItem="mwl-4m-Fm1" firstAttribute="top" secondItem="8lL-Iz-np6" secondAttribute="bottom" constant="-52" id="SCf-nn-aTZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8lL-Iz-np6" secondAttribute="trailing" constant="-16" id="U9h-XC-NVh"/>
+                            <constraint firstItem="8lL-Iz-np6" firstAttribute="leading" secondItem="dFR-lD-VfN" secondAttribute="leadingMargin" constant="-16" id="czg-9f-1sz"/>
                             <constraint firstItem="c7b-FQ-rwR" firstAttribute="leading" secondItem="dFR-lD-VfN" secondAttribute="leadingMargin" constant="-15" id="xSt-32-Kws"/>
                             <constraint firstItem="eV5-ua-nDe" firstAttribute="top" secondItem="0LH-TM-PxY" secondAttribute="bottom" constant="140" id="xfv-HO-bJP"/>
                         </constraints>
@@ -341,11 +366,13 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="backgroundView" destination="8lL-Iz-np6" id="JPU-IX-jAU"/>
                         <outlet property="facebookImage" destination="tCq-TV-dtr" id="OGg-xV-3VM"/>
                         <outlet property="fullName" destination="hyZ-E5-xLm" id="3tE-LC-xNg"/>
                         <outlet property="githubImage" destination="Rqo-52-gCf" id="kBa-Ej-N0J"/>
                         <outlet property="headerView" destination="c7b-FQ-rwR" id="dbL-9C-742"/>
                         <outlet property="linkedInImage" destination="vrs-uW-vLq" id="3rN-yX-4gl"/>
+                        <outlet property="logoBackgroundImage" destination="CQ9-hR-Ebe" id="7ie-9d-Yfw"/>
                         <outlet property="logoImage" destination="yOY-II-eVW" id="Rmh-Bm-J8U"/>
                         <outlet property="profileImage" destination="c5t-Ao-rFv" id="wdz-pg-dss"/>
                         <outlet property="tableView" destination="eV5-ua-nDe" id="ap6-vq-DzJ"/>

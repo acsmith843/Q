@@ -15,6 +15,9 @@
 
 @interface TeamMemberDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
+@property (weak, nonatomic) IBOutlet UIImageView *logoBackgroundImage;
+
 //header view
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
@@ -42,6 +45,7 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
     
     self.title = _currentTeamMember.firstName;
     
+    [self setupBackgroundView];
     [self setupHeaderView];
     [self setupTableView];
 }
@@ -60,6 +64,19 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - setup views
+
+- (void) setupBackgroundView {
+    
+    [Utils makeViewRounded:self.logoBackgroundImage];
+    
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    
+    visualEffectView.frame = self.backgroundView.bounds;
+    [self.backgroundView addSubview:visualEffectView];
+}
 
 - (void) setupHeaderView {
     

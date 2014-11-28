@@ -39,13 +39,7 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
     _teamMemberCollectionView.delegate = self;
     _teamMemberCollectionView.dataSource = self;
     
-    [Utils makeViewRounded:self.logoBackgroundImage];
-    
-    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    
-    visualEffectView.frame = self.backgroundView.bounds;
-    [self.backgroundView addSubview:visualEffectView];
+    [self setupBackgroundView];
     
     // set up search
     self.filteredTeamMemberArray = [NSMutableArray arrayWithCapacity:[_teamMembers count]];
@@ -54,6 +48,20 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - setup views
+
+- (void) setupBackgroundView {
+    
+    [Utils makeViewRounded:self.logoBackgroundImage];
+    
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    
+    visualEffectView.frame = self.backgroundView.bounds;
+    [self.backgroundView addSubview:visualEffectView];
 }
 
 
