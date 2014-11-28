@@ -10,9 +10,6 @@
 
 @interface Benefit : NSObject
 
-<<<<<<< HEAD
 @property (nonatomic,strong) NSString *name;
 
-=======
->>>>>>> 029c04731f2f7c9a7cf0606977f5bf868fb121e8
 @end
