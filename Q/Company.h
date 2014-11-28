@@ -10,6 +10,7 @@
 
 @interface Company : NSObject
 
+<<<<<<< HEAD
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSString *logoUrl;
 @property (nonatomic,strong) NSString *secondaryLogoUrl;
@@ -18,4 +19,6 @@
 @property (nonatomic,strong) NSArray *benefits;
 @property (nonatomic,strong) NSURL *webUrl;
 
+=======
+>>>>>>> 029c04731f2f7c9a7cf0606977f5bf868fb121e8
 @end
