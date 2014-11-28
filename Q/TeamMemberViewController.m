@@ -11,10 +11,16 @@
 #import "TeamMember.h"
 #import "UIImageView+AFNetworking.h"
 #import "TeamMemberDetailViewController.h"
+#import "Utils.h"
 
 @interface TeamMemberViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *teamMemberCollectionView;
 @property (strong, nonatomic) NSArray *teamMembers;
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
+@property (weak, nonatomic) IBOutlet UIImageView *logoBackgroundImage;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchBarButtonItem;
+@property (weak, nonatomic) IBOutlet UISearchBar *memberSearchBar;
+@property (strong,nonatomic) NSMutableArray *filteredTeamMemberArray;
 @property (strong, nonatomic) TeamMember *currentTeamMember;
 @end
 
@@ -32,6 +38,18 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
     
     _teamMemberCollectionView.delegate = self;
     _teamMemberCollectionView.dataSource = self;
+    
+    [Utils makeViewRounded:self.logoBackgroundImage];
+    
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    
+    visualEffectView.frame = self.backgroundView.bounds;
+    [self.backgroundView addSubview:visualEffectView];
+    
+    // set up search
+    _memberSearchBar.hidden = YES;
+    self.filteredTeamMemberArray = [NSMutableArray arrayWithCapacity:[_teamMembers count]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -108,5 +126,37 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
         TeamMemberDetailViewController *dest = (TeamMemberDetailViewController *)[segue destinationViewController];
         [dest setCurrentTeamMember:_currentTeamMember];
     }
+}
+
+- (IBAction)searchButtonPressed:(id)sender {
+    
+    if (_memberSearchBar.isHidden) {
+        [self animateView:_teamMemberCollectionView distance:44];
+    } else {
+        [self animateView:_teamMemberCollectionView distance:-44];
+    }
+
+}
+
+- (void) animateView:(UIView *)view distance:(int)dist {
+    
+    [UIView animateWithDuration:0.5
+                          delay:0.1
+                        options: UIViewAnimationOptionCurveEaseOut
+                     animations:^ {
+                         CGRect frame = view.frame;
+                         frame.origin.y += dist;
+                         frame.origin.x = 0;
+                         view.frame = frame;
+                     }
+                     completion:^(BOOL finished)
+     {
+         if (_memberSearchBar.isHidden) {
+             _memberSearchBar.hidden = NO;
+         } else {
+             _memberSearchBar.hidden = YES;
+         }
+         NSLog(@"Completed");
+     }];
 }
 @end

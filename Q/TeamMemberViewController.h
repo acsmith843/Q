@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TeamMemberViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface TeamMemberViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UISearchDisplayDelegate>
 
 @end
