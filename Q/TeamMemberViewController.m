@@ -48,7 +48,6 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
     [self.backgroundView addSubview:visualEffectView];
     
     // set up search
-    _memberSearchBar.hidden = YES;
     self.filteredTeamMemberArray = [NSMutableArray arrayWithCapacity:[_teamMembers count]];
 }
 
@@ -130,10 +129,12 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
 
 - (IBAction)searchButtonPressed:(id)sender {
     
-    if (_memberSearchBar.isHidden) {
+    if (_memberSearchBar.frame.origin.y < 50) {
         [self animateView:_teamMemberCollectionView distance:44];
+        [self animateView:_memberSearchBar distance:44];
     } else {
         [self animateView:_teamMemberCollectionView distance:-44];
+        [self animateView:_memberSearchBar distance:-44];
     }
 
 }
@@ -151,11 +152,6 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
                      }
                      completion:^(BOOL finished)
      {
-         if (_memberSearchBar.isHidden) {
-             _memberSearchBar.hidden = NO;
-         } else {
-             _memberSearchBar.hidden = YES;
-         }
          NSLog(@"Completed");
      }];
 }
