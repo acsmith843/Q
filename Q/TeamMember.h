@@ -19,6 +19,6 @@
 
 - (id)initFromDictionary:(NSDictionary*)dict;
 
-+ (NSArray *) getMockTeamMembers;
++ (NSMutableArray *) getMockTeamMembers;
 
 @end

@@ -184,7 +184,7 @@
                     <connections>
                         <outlet property="backgroundView" destination="jPK-EQ-cfG" id="KWJ-6c-oYO"/>
                         <outlet property="logoBackgroundImage" destination="Bp1-xj-bY2" id="1mD-5q-Bcx"/>
-                        <outlet property="memberSearchBar" destination="OfV-UI-dm1" id="nZ4-Bp-Lhu"/>
+                        <outlet property="searchBar" destination="OfV-UI-dm1" id="BQP-Tv-QsD"/>
                         <outlet property="searchBarButtonItem" destination="6fX-kK-V9R" id="aM3-H7-Pzu"/>
                         <outlet property="teamMemberCollectionView" destination="8vz-FC-bdy" id="X8U-uG-jh7"/>
                         <segue destination="ptS-be-NqE" kind="show" identifier="memberDetailSegue" id="8Mi-N7-pdy"/>

@@ -26,7 +26,7 @@
 
 #pragma mark - mock data
 
-+ (NSArray *) getMockTeamMembers {
++ (NSMutableArray *) getMockTeamMembers {
     
     TeamMember *teamMember1 = [[TeamMember alloc] init];
     teamMember1.firstName = @"Ron";
@@ -52,7 +52,7 @@
     teamMember3.bio = @"Seitan organic bicycle rights, four loko tilde mlkshk food truck Vice. Cornhole cliche Pitchfork Godard swag cold-pressed 8-bit, fap cred meh Shoreditch beard wolf. High Life direct trade cliche authentic art party lomo small batch, health goth whatever actually +1 dreamcatcher ugh narwhal. Fap normcore hella chillwave. Freegan meditation wolf, umami pickled actually mixtape kitsch hoodie Marfa. High Life distillery wayfarers lo-fi. Shabby chic kogi street art, sriracha Schlitz retro migas literally Tumblr.";
     teamMember3.specialties = [NSArray arrayWithObjects:@"i", @"love", @"lamp", nil];
     
-    NSArray *members = [[NSArray alloc] initWithObjects:teamMember1, teamMember2, teamMember3, nil];
+    NSMutableArray *members = [[NSMutableArray alloc] initWithObjects:teamMember1, teamMember2, teamMember3, nil];
     
     return members;
 }
