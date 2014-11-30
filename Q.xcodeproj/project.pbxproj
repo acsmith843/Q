@@ -10,6 +10,9 @@
 		C257C1701A28A9FE00DF3DD4 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C257C16F1A28A9FE00DF3DD4 /* background@2x.jpg */; };
 		C257C1761A290EB300DF3DD4 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = C257C1751A290EB300DF3DD4 /* Company.m */; };
 		C257C1791A290EF100DF3DD4 /* Benefit.m in Sources */ = {isa = PBXBuildFile; fileRef = C257C1781A290EF100DF3DD4 /* Benefit.m */; };
+		C257C17C1A2B669E00DF3DD4 /* AboutCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C257C17B1A2B669E00DF3DD4 /* AboutCompanyViewController.m */; };
+		C257C1831A2B697900DF3DD4 /* Email-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C257C1811A2B697900DF3DD4 /* Email-icon@2x.png */; };
+		C257C1841A2B697900DF3DD4 /* Phone-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C257C1821A2B697900DF3DD4 /* Phone-icon@2x.png */; };
 		C2C226D31A1F526600D95FD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C226D21A1F526600D95FD4 /* main.m */; };
 		C2C226D61A1F526600D95FD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C226D51A1F526600D95FD4 /* AppDelegate.m */; };
 		C2C226DF1A1F526600D95FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C226DD1A1F526600D95FD4 /* Main.storyboard */; };
@@ -49,6 +52,10 @@
 		C257C1751A290EB300DF3DD4 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		C257C1771A290EF100DF3DD4 /* Benefit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Benefit.h; sourceTree = "<group>"; };
 		C257C1781A290EF100DF3DD4 /* Benefit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Benefit.m; sourceTree = "<group>"; };
+		C257C17A1A2B669E00DF3DD4 /* AboutCompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutCompanyViewController.h; sourceTree = "<group>"; };
+		C257C17B1A2B669E00DF3DD4 /* AboutCompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCompanyViewController.m; sourceTree = "<group>"; };
+		C257C1811A2B697900DF3DD4 /* Email-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Email-icon@2x.png"; sourceTree = "<group>"; };
+		C257C1821A2B697900DF3DD4 /* Phone-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Phone-icon@2x.png"; sourceTree = "<group>"; };
 		C2C226CD1A1F526600D95FD4 /* Q.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Q.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C226D11A1F526600D95FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C226D21A1F526600D95FD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -197,6 +204,8 @@
 				C2C2270E1A1F5C7200D95FD4 /* TeamMemberViewController.m */,
 				C2C227801A1F8F8F00D95FD4 /* TeamMemberDetailViewController.h */,
 				C2C227811A1F8F8F00D95FD4 /* TeamMemberDetailViewController.m */,
+				C257C17A1A2B669E00DF3DD4 /* AboutCompanyViewController.h */,
+				C257C17B1A2B669E00DF3DD4 /* AboutCompanyViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +243,8 @@
 		C2C227871A1FC85700D95FD4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C257C1811A2B697900DF3DD4 /* Email-icon@2x.png */,
+				C257C1821A2B697900DF3DD4 /* Phone-icon@2x.png */,
 				C257C16F1A28A9FE00DF3DD4 /* background@2x.jpg */,
 				C2C2278C1A1FCE5A00D95FD4 /* github@2x.png */,
 				C2C2278D1A1FCE5A00D95FD4 /* linkedInIcon@2x.jpg */,
@@ -341,9 +352,11 @@
 				C2C226E41A1F526600D95FD4 /* LaunchScreen.xib in Resources */,
 				C2C227911A1FCE5A00D95FD4 /* twittericon@2x.png in Resources */,
 				C2C2278A1A1FC86500D95FD4 /* Q@2x.png in Resources */,
+				C257C1841A2B697900DF3DD4 /* Phone-icon@2x.png in Resources */,
 				C2C226E11A1F526600D95FD4 /* Images.xcassets in Resources */,
 				C2C227901A1FCE5A00D95FD4 /* linkedInIcon@2x.jpg in Resources */,
 				C257C1701A28A9FE00DF3DD4 /* background@2x.jpg in Resources */,
+				C257C1831A2B697900DF3DD4 /* Email-icon@2x.png in Resources */,
 				C2C2278F1A1FCE5A00D95FD4 /* github@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C257C17C1A2B669E00DF3DD4 /* AboutCompanyViewController.m in Sources */,
 				C257C1791A290EF100DF3DD4 /* Benefit.m in Sources */,
 				C2C227821A1F8F8F00D95FD4 /* TeamMemberDetailViewController.m in Sources */,
 				C257C1761A290EB300DF3DD4 /* Company.m in Sources */,
