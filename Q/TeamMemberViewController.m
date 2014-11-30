@@ -107,6 +107,8 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
     return cell;
 }
 
+
+
 #pragma mark <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,21 +120,21 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    CGSize mElementSize = CGSizeMake((self.view.frame.size.width / 2), 185);
+    CGSize mElementSize = CGSizeMake(((self.view.frame.size.width / 2) - 1), 185);
     return mElementSize;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 0.0;
+    return 1;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 0.0;
+    return 2.0;
 }
 
 - (UIEdgeInsets)collectionView:
 (UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-     return UIEdgeInsetsMake(0,0,0,0);  // top, left, bottom, right
+     return UIEdgeInsetsMake(.5,.5,0,.5);  // top, left, bottom, right
 }
 
 
@@ -187,7 +189,7 @@ static NSString * const reuseIdentifier = @"teamMemberCell";
 
 
 
-#pragma mark UISearchBarDelegate
+#pragma mark - UISearchBarDelegate
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     

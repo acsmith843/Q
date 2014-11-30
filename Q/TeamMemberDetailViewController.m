@@ -23,11 +23,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UILabel *fullName;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *twitterImage;
-@property (weak, nonatomic) IBOutlet UIImageView *facebookImage;
-@property (weak, nonatomic) IBOutlet UIImageView *linkedInImage;
-@property (weak, nonatomic) IBOutlet UIImageView *githubImage;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
+@property (weak, nonatomic) IBOutlet UIButton *emailButton;
+@property (weak, nonatomic) IBOutlet UIButton *callButton;
 
 //table view
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -91,11 +89,6 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
     
     _fullName.text = [NSString stringWithFormat:@"%@ %@", _currentTeamMember.firstName, _currentTeamMember.lastName];
     _titleLabel.text = _currentTeamMember.title;
-    
-    [Utils makeViewRounded:_twitterImage];
-    [Utils makeViewRounded:_facebookImage];
-    [Utils makeViewRounded:_linkedInImage];
-    [Utils makeViewRounded:_githubImage];
 }
 
 - (void) setupTableView {
@@ -152,5 +145,75 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
 #pragma mark - UITableView delegate
 
 // TODO
+
+
+#pragma mark - button actions
+
+- (IBAction)emailButtonPressed:(id)sender {
+    
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:[NSString stringWithFormat:@"%@ %@", _currentTeamMember.firstName, _currentTeamMember.lastName]
+                                          message:_currentTeamMember.emailAddress
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:@"Cancel"
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       NSLog(@"Cancel action");
+                                   }];
+    
+    UIAlertAction *emailAction = [UIAlertAction
+                               actionWithTitle:@"Email"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   NSLog(@"Call action");
+                               }];
+    
+    [alertController addAction:emailAction];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (IBAction)phoneButtonPressed:(id)sender {
+    
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:[NSString stringWithFormat:@"%@ %@", _currentTeamMember.firstName, _currentTeamMember.lastName]
+                                          message:_currentTeamMember.phoneNumber
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:@"Cancel"
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       NSLog(@"Cancel action");
+                                   }];
+    
+    UIAlertAction *callAction = [UIAlertAction
+                                 actionWithTitle:@"Call"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction *action)
+                                 {
+                                     NSLog(@"Call action");
+                                 }];
+    
+    UIAlertAction *addToContactsAction = [UIAlertAction
+                                    actionWithTitle:@"Add To Contacts"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction *action)
+                                    {
+                                        NSLog(@"Add action");
+                                    }];
+    
+    [alertController addAction:callAction];
+    [alertController addAction:addToContactsAction];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 @end
