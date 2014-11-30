@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "TeamMember.h"
 
-@interface TeamMemberDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface TeamMemberDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) TeamMember *currentTeamMember;
 

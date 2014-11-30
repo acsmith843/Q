@@ -169,7 +169,8 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
-                                   NSLog(@"Call action");
+                                   NSLog(@"Email action");
+                                   [self sendMail];
                                }];
     
     [alertController addAction:emailAction];
@@ -185,20 +186,13 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
                                           message:_currentTeamMember.phoneNumber
                                           preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *cancelAction = [UIAlertAction
-                                   actionWithTitle:@"Cancel"
-                                   style:UIAlertActionStyleCancel
-                                   handler:^(UIAlertAction *action)
-                                   {
-                                       NSLog(@"Cancel action");
-                                   }];
-    
     UIAlertAction *callAction = [UIAlertAction
                                  actionWithTitle:@"Call"
                                  style:UIAlertActionStyleDefault
                                  handler:^(UIAlertAction *action)
                                  {
                                      NSLog(@"Call action");
+                                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", _currentTeamMember.phoneNumber]]];
                                  }];
     
     UIAlertAction *addToContactsAction = [UIAlertAction
@@ -209,11 +203,46 @@ static NSString * const specialitiesIdentifier = @"specialtiesCell";
                                         NSLog(@"Add action");
                                     }];
     
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:@"Cancel"
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       NSLog(@"Cancel action");
+                                   }];
+    
     [alertController addAction:callAction];
     [alertController addAction:addToContactsAction];
     [alertController addAction:cancelAction];
     
     [self presentViewController:alertController animated:YES completion:nil];
+}
+
+
+#pragma mark - mail methods
+
+-(void) sendMail {
+    
+    MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc]init];
+    mailComposer.mailComposeDelegate = self;
+    
+    [mailComposer setToRecipients:[NSArray arrayWithObjects:_currentTeamMember.emailAddress, nil]];
+    
+    [self presentViewController:mailComposer animated:YES completion:nil];
+}
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    
+    if (result) {
+        NSLog(@"Result : %d",result);
+    }
+    
+    if (error) {
+        NSLog(@"Error sending email: %@", error);
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

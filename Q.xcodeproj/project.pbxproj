@@ -13,6 +13,7 @@
 		C257C17C1A2B669E00DF3DD4 /* AboutCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C257C17B1A2B669E00DF3DD4 /* AboutCompanyViewController.m */; };
 		C257C1831A2B697900DF3DD4 /* Email-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C257C1811A2B697900DF3DD4 /* Email-icon@2x.png */; };
 		C257C1841A2B697900DF3DD4 /* Phone-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C257C1821A2B697900DF3DD4 /* Phone-icon@2x.png */; };
+		C257C1861A2BA99700DF3DD4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C257C1851A2BA99700DF3DD4 /* MessageUI.framework */; };
 		C2C226D31A1F526600D95FD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C226D21A1F526600D95FD4 /* main.m */; };
 		C2C226D61A1F526600D95FD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C226D51A1F526600D95FD4 /* AppDelegate.m */; };
 		C2C226DF1A1F526600D95FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C226DD1A1F526600D95FD4 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		C257C17B1A2B669E00DF3DD4 /* AboutCompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCompanyViewController.m; sourceTree = "<group>"; };
 		C257C1811A2B697900DF3DD4 /* Email-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Email-icon@2x.png"; sourceTree = "<group>"; };
 		C257C1821A2B697900DF3DD4 /* Phone-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Phone-icon@2x.png"; sourceTree = "<group>"; };
+		C257C1851A2BA99700DF3DD4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C2C226CD1A1F526600D95FD4 /* Q.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Q.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C226D11A1F526600D95FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C226D21A1F526600D95FD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C257C1861A2BA99700DF3DD4 /* MessageUI.framework in Frameworks */,
 				C2C227B31A20321D00D95FD4 /* UIKit.framework in Frameworks */,
 				F876254BC4BF8B46CC9BED96 /* libPods-Q.a in Frameworks */,
 			);
@@ -258,6 +261,7 @@
 		C2C227B21A2031B300D95FD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C257C1851A2BA99700DF3DD4 /* MessageUI.framework */,
 				C2C227B01A2031AA00D95FD4 /* UIKit.framework */,
 				F50A1B38AF02E26B212EE3C4 /* libPods-Q.a */,
 			);
